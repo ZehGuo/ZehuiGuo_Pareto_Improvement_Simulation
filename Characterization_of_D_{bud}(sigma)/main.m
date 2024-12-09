@@ -1,15 +1,16 @@
 A11=[-2,1;1,-3];
 b11_temp=5;
 A12=[-2,-1;-1,-10];
-b12_temp=15;
+b12_temp=20;
 A21=[-4,1;1,-4];
+%A21=[-5,1;1,-4];
 b21_temp=0;
 A22=[-5,-1;-1,-2];
 b22_temp=0;
-x11_temp=3;
-x12_temp=12;
-x21_temp=25;
-x22_temp=17;
+x11_temp=2;
+x12_temp=4;
+x21_temp=24;
+x22_temp=16;
 
 
 [temp1,temp2]=testfun1([A11(1,:),b11_temp],A11(2,:),x11_temp);
@@ -33,9 +34,9 @@ b22=[temp2;b22_temp];
 % eta22=3;
 
 eta11=1;
-eta12=0;
-eta21=5;
-eta22=0;
+eta12=3;
+eta21=1;
+eta22=3;
 
 lambda1=1;
 lambda2=1;
@@ -49,8 +50,8 @@ Jb=b11+lambda1*b12+b21+lambda2*b22;
 xp1=-inv(JA)*(Jb);
 
 xpe1=-inv(UA)*(Ub);
-sx=5;
-sy=5;
+sx=18.5;
+sy=-8.71;
 
 
 hFig = figure('Name', 'Interactive Sigma Adjustment', 'NumberTitle', 'off');
